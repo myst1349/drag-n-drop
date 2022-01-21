@@ -24,5 +24,3 @@ export interface IRoute {
   linkProps: ILinkProps;
   routeProps: IRouteProps;
 }
-
-export type Routes = Array<IRoute>;

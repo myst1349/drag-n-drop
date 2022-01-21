@@ -3,7 +3,7 @@ import {BrowserRouter as Router, Routes, Route, Navigate} from 'react-router-dom
 
 import PageLayout from '../components/PageLayout';
 
-import {IRoute} from '../types/routes';
+import {IRoute} from '../types/route';
 import routes from '../constants/routes';
 
 function App() {

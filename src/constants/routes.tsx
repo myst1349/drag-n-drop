@@ -1,9 +1,9 @@
 import Home from '../pages/Home';
 import Notes from '../pages/Notes';
 
-import {Routes} from '../types/routes';
+import {IRoute} from '../types/route';
 
-const routes: Routes = [
+const routes: Array<IRoute> = [
   {
     label: 'Home',
     linkProps: {
