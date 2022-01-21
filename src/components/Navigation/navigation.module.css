@@ -1,0 +1,14 @@
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    border-bottom: solid 1px var(--main-border-color);
+    list-style-type: none;
+}
+
+.navItem {
+    padding: 16px 32px;
+}
+
+.activeLink {
+    text-decoration: underline;
+}

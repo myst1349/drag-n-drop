@@ -1,0 +1,7 @@
+.wrapper {
+    min-height: 100vh;
+}
+.header {}
+.content {
+    padding: 40px 30px;
+}
