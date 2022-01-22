@@ -1,0 +1,11 @@
+.wrapper {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.button {
+    height: 26px;
+    margin: 7px 15px;
+}

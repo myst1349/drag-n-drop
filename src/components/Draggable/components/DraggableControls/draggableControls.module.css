@@ -1,0 +1,30 @@
+.wrapper {
+    width: 100%;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.dragIcon, .toFrontIcon, .toBackIcon {
+    padding: 7px;
+}
+
+.alignLeft {
+    margin-right: auto;
+}
+
+.dragIcon {
+    transform: rotate(45deg);
+    cursor: grab;
+}
+
+.toFrontIcon {
+    cursor: pointer;
+}
+
+.toBackIcon {
+    cursor: pointer;
+    transform: rotate(180deg);
+}

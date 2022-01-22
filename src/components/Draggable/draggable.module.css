@@ -1,0 +1,11 @@
+.wrapper {
+    position: absolute;
+    resize: both;
+    overflow: auto;
+    min-width: 100px;
+    min-height: 100px;
+}
+
+.content {
+    padding: 10px 7px;
+}

@@ -5,6 +5,7 @@
     /* Colors */
     --main-bg-color: #282c34;
     --main-text-color: #fff;
+    --inverted-text-color: #282c34;
     --main-link-color: #61dafb;
     --main-border-color: #beefff;
 }
