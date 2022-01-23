@@ -1,5 +1,5 @@
-const debounce = (func, delay) => {
-  let timer;
+const debounce = (func, delay: number) => {
+  let timer: ReturnType<typeof setTimeout>;
 
   return function () {
     // let self = this;

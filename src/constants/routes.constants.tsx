@@ -1,9 +1,9 @@
 import Home from '../pages/Home';
 import Notes from '../pages/Notes';
 
-import {IRoute} from '../types/route';
+import {IRoute} from '../types/route.types';
 
-const routes: Array<IRoute> = [
+const routesConstants: Array<IRoute> = [
   {
     label: 'Home',
     linkProps: {
@@ -26,4 +26,4 @@ const routes: Array<IRoute> = [
   },
 ];
 
-export default routes;
+export default routesConstants;

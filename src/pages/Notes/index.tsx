@@ -1,27 +1,17 @@
 import React, {useEffect, useState} from 'react';
 
+import CreateNoteForm from './components/CreateNoteForm';
 import Droppable from '../../components/Droppable';
 import Draggable from '../../components/Draggable';
 
-import {IDraggableParams} from '../../components/Draggable/types/draggable';
+import {defaultNoteParams} from './constants/notes.constants';
+import {IDraggableParams} from '../../components/Draggable/types/draggable.types';
 
 import styles from './notes.module.css';
-import CreateNoteForm from './components/CreateNoteForm';
 
 const Notes: React.FC = () => {
-  const initialNoteParams = {
-    id: 1,
-    width: 200,
-    height: 150,
-    color: '#ffef8e',
-    top: 10,
-    left: 10,
-    text: '',
-    zIndex: 1,
-  };
-
   const [draggables, setDraggables] = useState<Array<IDraggableParams> | any[]>([]);
-  const [newNoteParams, setNewNoteParams] = useState(initialNoteParams);
+  const [newNoteParams, setNewNoteParams] = useState(defaultNoteParams);
   const [draggingElementId, setDraggingElementId] = useState(null);
 
   useEffect(() => {
