@@ -3,6 +3,8 @@ import React from 'react';
 import {ReactComponent as IconEnlarge} from '../../../../icons/enlarge.svg';
 import {ReactComponent as IconArrow} from '../../../../icons/arrow-up.svg';
 
+import {stopPropagation} from '../../../../helpers/event';
+
 import styles from './draggableControls.module.css';
 
 interface IDraggableControlsProps {
@@ -19,15 +21,15 @@ const DraggableControls: React.FC<IDraggableControlsProps> = (props) => {
   };
 
   return (
-    <div className={styles.wrapper}>
-      <div className={styles.alignLeft} title={'Drag'} onMouseDown={handleMouseDown}>
-        <IconEnlarge className={styles.dragIcon} />
+    <div className={styles.wrapper} onMouseUp={stopPropagation}>
+      <div className={styles.alignLeft} onMouseDown={handleMouseDown}>
+        <IconEnlarge className={styles.dragIcon} title={'Drag'} />
       </div>
-      <div title={'Bring To Front'} onClick={bringToFront}>
-        <IconArrow className={styles.toFrontIcon} />
+      <div onClick={bringToFront}>
+        <IconArrow className={styles.toFrontIcon} title={'Bring To Front'} />
       </div>
-      <div title={'Bring To Back'} onClick={bringToBack}>
-        <IconArrow className={styles.toBackIcon} />
+      <div onClick={bringToBack}>
+        <IconArrow className={styles.toBackIcon} title={'Bring To Back'} />
       </div>
     </div>
   );

@@ -16,19 +16,12 @@ const Notes: React.FC = () => {
 
   useEffect(() => {
     const restoredDraggables = JSON.parse(localStorage.getItem('draggables'));
+
     setDraggables(restoredDraggables);
   }, []);
 
   useEffect(() => {
-    let autoSave = setInterval(() => {
-      localStorage.setItem('draggables', JSON.stringify(draggables));
-    }, 3000);
-
-    // Cleanup on Unmount
-    return () => {
-      localStorage.setItem('draggables', JSON.stringify(draggables));
-      clearInterval(autoSave);
-    };
+    localStorage.setItem('draggables', JSON.stringify(draggables));
   }, [draggables]);
 
   const addDraggable = () => {

@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import DraggableControls from './components/DraggableControls';
 
 import noop from '../../helpers/noop';
+import {stopPropagation} from '../../helpers/event';
 import {IDraggableProps} from './types/draggable.types';
 
 import styles from './draggable.module.css';
@@ -104,9 +105,7 @@ const Draggable: React.FC<IDraggableProps> = (props) => {
       <div
         className={styles.content}
         onBlur={handleBlur}
-        onMouseUp={(e) => {
-          e.stopPropagation();
-        }}
+        onMouseUp={stopPropagation}
         contentEditable
         suppressContentEditableWarning>
         {elParams.text || 'Type your text here'}
