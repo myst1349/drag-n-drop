@@ -65,6 +65,8 @@ const Draggable: React.FC<IDraggableProps> = (props) => {
   };
 
   const handleMouseUp = (e) => {
+    e.stopPropagation();
+
     const size = {
       width: elParams.width,
       height: elParams.height,

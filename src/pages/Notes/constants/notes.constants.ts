@@ -8,3 +8,13 @@ export const defaultNoteParams = {
   text: '',
   zIndex: 1,
 };
+
+export const defaultMouseCoords = {
+  startX: 0,
+  startY: 0,
+  endX: 0,
+  endY: 0,
+  top: 0,
+  left: 0,
+  isCalculated: false,
+};
